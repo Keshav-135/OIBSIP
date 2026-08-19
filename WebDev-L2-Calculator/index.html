@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitculations - Smart • Simple • Powerful Calculations</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="theme-blue light-mode">
+
+  <!-- Intro Screen Overlay -->
+  <div class="intro-screen" id="intro-screen">
+    <div class="intro-content">
+      <h1 class="intro-title">∑ Digitculations</h1>
+      <p>Calculations Made Simple</p>
+    </div>
+  </div>
+
+  <!-- Background Animated Math Symbols -->
+  <div class="bg-symbols-container">
+    <span class="math-symbol" style="--i:1; --x:3%; --speed:22s;">+</span>
+    <span class="math-symbol" style="--i:2; --x:8%; --speed:18s;">1</span>
+    <span class="math-symbol" style="--i:3; --x:14%; --speed:26s;">cot</span>
+    <span class="math-symbol" style="--i:4; --x:19%; --speed:21s;">−</span>
+    <span class="math-symbol" style="--i:5; --x:24%; --speed:25s;">2</span>
+    <span class="math-symbol" style="--i:6; --x:29%; --speed:19s;">sec</span>
+    <span class="math-symbol" style="--i:7; --x:34%; --speed:23s;">×</span>
+    <span class="math-symbol" style="--i:8; --x:39%; --speed:20s;">3</span>
+    <span class="math-symbol" style="--i:9; --x:44%; --speed:27s;">cosec</span>
+    <span class="math-symbol" style="--i:10; --x:49%; --speed:20s;">÷</span>
+    <span class="math-symbol" style="--i:11; --x:54%; --speed:22s;">4</span>
+    <span class="math-symbol" style="--i:12; --x:59%; --speed:28s;">sin</span>
+    <span class="math-symbol" style="--i:13; --x:64%; --speed:19s;">5</span>
+    <span class="math-symbol" style="--i:14; --x:69%; --speed:27s;">√</span>
+    <span class="math-symbol" style="--i:15; --x:74%; --speed:21s;">6</span>
+    <span class="math-symbol" style="--i:16; --x:79%; --speed:24s;">cos</span>
+    <span class="math-symbol" style="--i:17; --x:84%; --speed:22s;">7</span>
+    <span class="math-symbol" style="--i:18; --x:88%; --speed:25s;">tan</span>
+    <span class="math-symbol" style="--i:19; --x:92%; --speed:23s;">8</span>
+    <span class="math-symbol" style="--i:20; --x:95%; --speed:20s;">π</span>
+    <span class="math-symbol" style="--i:21; --x:98%; --speed:26s;">∫</span>
+    <span class="math-symbol" style="--i:22; --x:12%; --speed:24s;">9</span>
+    <span class="math-symbol" style="--i:23; --x:82%; --speed:26s;">0</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-icon">∑</span>
+        <span class="brand-name">Digitculations</span>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <button class="nav-btn active" id="nav-basic" data-mode="basic">Basic Calculator</button>
+        <button class="nav-btn" id="nav-scientific" data-mode="scientific">Scientific Calculator</button>
+        <button class="nav-btn" id="nav-currency" data-mode="currency">Currency Converter</button>
+        <button class="nav-btn" id="nav-physical">Calculator Theme</button>
+
+        <div class="color-dropdown">
+          <button class="nav-btn color-dropdown-btn" id="color-picker-toggle">
+            Theme Color <span class="color-indicator"></span>
+          </button>
+          <div class="color-palette" id="color-palette">
+            <button class="color-opt bg-blue" data-color="blue" title="Blue"></button>
+            <button class="color-opt bg-purple" data-color="purple" title="Purple"></button>
+            <button class="color-opt bg-green" data-color="green" title="Green"></button>
+            <button class="color-opt bg-orange" data-color="orange" title="Orange"></button>
+            <button class="color-opt bg-yellow" data-color="yellow" title="Yellow"></button>
+            <button class="color-opt bg-red" data-color="red" title="Red"></button>
+            <button class="color-opt bg-pink" data-color="pink" title="Pink"></button>
+            <button class="color-opt bg-cyan" data-color="cyan" title="Cyan"></button>
+          </div>
+        </div>
+
+        <button class="theme-toggle-btn" id="dark-mode-toggle" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+    <div class="header-section">
+      <h1 class="main-title">Digitculations</h1>
+      <p class="subtitle">Smart • Simple • Powerful Calculations</p>
+    </div>
+
+    <div class="calculator-wrapper phone-mode" id="calc-wrapper">
+      <div class="smartphone-frame" id="smartphone-frame">
+        <div class="phone-top-bar">
+          <div class="speaker"></div>
+          <div class="camera"></div>
+        </div>
+
+        <div class="phone-screen">
+          <div class="status-bar">
+            <span class="status-time" id="current-time">12:45</span>
+            <div class="status-icons">
+              <span class="deg-rad-badge" id="angle-mode-badge" style="display: none;">DEG</span>
+              <span>📶</span>
+              <span>🔋</span>
+            </div>
+          </div>
+
+          <div class="calc-display" id="main-calc-display">
+            <div class="expression-line" id="expression-display"></div>
+            <div class="result-line" id="result-display">0</div>
+          </div>
+
+          <!-- Basic Keypad -->
+          <div class="keypad basic-keypad" id="basic-keypad">
+            <button class="btn btn-func btn-theme-action" data-action="clear">AC</button>
+            <button class="btn btn-func btn-theme-action" data-action="delete">⌫</button>
+            <button class="btn btn-op btn-theme-action" data-action="percent">%</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="*">×</button>
+
+            <button class="btn btn-num" data-value="7">7</button>
+            <button class="btn btn-num" data-value="8">8</button>
+            <button class="btn btn-num" data-value="9">9</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="/">÷</button>
+
+            <button class="btn btn-num" data-value="4">4</button>
+            <button class="btn btn-num" data-value="5">5</button>
+            <button class="btn btn-num" data-value="6">6</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="-">−</button>
+
+            <button class="btn btn-num" data-value="1">1</button>
+            <button class="btn btn-num" data-value="2">2</button>
+            <button class="btn btn-num" data-value="3">3</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="+">+</button>
+
+            <button class="btn btn-num" data-value="0">0</button>
+            <button class="btn btn-num" data-value=".">.</button>
+            <button class="btn btn-num" data-action="pm">±</button>
+            <button class="btn btn-equals btn-theme-action" data-action="equals">=</button>
+          </div>
+
+          <!-- Scientific Keypad -->
+          <div class="keypad scientific-keypad" id="scientific-keypad" style="display: none;">
+            <button class="btn btn-sci" id="angle-toggle" data-action="angle-toggle">DEG</button>
+            <button class="btn btn-sci" data-action="sci" data-value="sin">sin</button>
+            <button class="btn btn-sci" data-action="sci" data-value="cos">cos</button>
+            <button class="btn btn-sci" data-action="sci" data-value="tan">tan</button>
+
+            <button class="btn btn-sci" data-action="sci" data-value="asin">sin⁻¹</button>
+            <button class="btn btn-sci" data-action="sci" data-value="acos">cos⁻¹</button>
+            <button class="btn btn-sci" data-action="sci" data-value="atan">tan⁻¹</button>
+            <button class="btn btn-sci" data-action="sci" data-value="log">log</button>
+
+            <button class="btn btn-sci" data-action="sci" data-value="ln">ln</button>
+            <button class="btn btn-sci" data-action="sci" data-value="sqrt">√</button>
+            <button class="btn btn-sci" data-value="^2">x²</button>
+            <button class="btn btn-sci" data-action="op" data-value="^">xʸ</button>
+
+            <button class="btn btn-sci" data-value="π">π</button>
+            <button class="btn btn-sci" data-value="e">e</button>
+            <button class="btn btn-sci" data-value="(">(</button>
+            <button class="btn btn-sci" data-value=")">)</button>
+
+            <button class="btn btn-func btn-theme-action" data-action="clear">AC</button>
+            <button class="btn btn-func btn-theme-action" data-action="delete">⌫</button>
+            <button class="btn btn-op btn-theme-action" data-action="percent">%</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="*">×</button>
+
+            <button class="btn btn-num" data-value="7">7</button>
+            <button class="btn btn-num" data-value="8">8</button>
+            <button class="btn btn-num" data-value="9">9</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="/">÷</button>
+
+            <button class="btn btn-num" data-value="4">4</button>
+            <button class="btn btn-num" data-value="5">5</button>
+            <button class="btn btn-num" data-value="6">6</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="-">−</button>
+
+            <button class="btn btn-num" data-value="1">1</button>
+            <button class="btn btn-num" data-value="2">2</button>
+            <button class="btn btn-num" data-value="3">3</button>
+            <button class="btn btn-op btn-theme-action" data-action="op" data-value="+">+</button>
+
+            <button class="btn btn-num" data-value="0">0</button>
+            <button class="btn btn-num" data-value=".">.</button>
+            <button class="btn btn-sci" data-action="sci" data-value="fact">n!</button>
+            <button class="btn btn-equals btn-theme-action" data-action="equals">=</button>
+          </div>
+
+          <!-- Currency Panel -->
+          <div class="currency-panel" id="currency-panel" style="display: none;">
+            <div class="currency-group">
+              <label for="currency-amount">Amount</label>
+              <input type="number" id="currency-amount" value="1" placeholder="Enter amount" min="0" step="any">
+            </div>
+
+            <div class="currency-row">
+              <div class="currency-group">
+                <label for="currency-from">From</label>
+                <select id="currency-from">
+                  <option value="USD" selected>USD ($)</option>
+                  <option value="INR">INR (₹)</option>
+                  <option value="EUR">EUR (€)</option>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="AED">AED (د.إ)</option>
+                  <option value="CAD">CAD ($)</option>
+                  <option value="AUD">AUD ($)</option>
+                  <option value="JPY">JPY (¥)</option>
+                </select>
+              </div>
+
+              <button class="swap-btn" id="swap-currency" title="Swap Currencies">⇄</button>
+
+              <div class="currency-group">
+                <label for="currency-to">To</label>
+                <select id="currency-to">
+                  <option value="INR" selected>INR (₹)</option>
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="AED">AED (د.إ)</option>
+                  <option value="CAD">CAD ($)</option>
+                  <option value="AUD">AUD ($)</option>
+                  <option value="JPY">JPY (¥)</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="convert-btn btn-theme-action" id="convert-currency-btn">Convert</button>
+
+            <div class="currency-result-card">
+              <div class="rate-info" id="exchange-rate-info">1 USD = -- INR</div>
+              <div class="converted-value" id="converted-result-value">0.00</div>
+            </div>
+          </div>
+
+          <div class="home-indicator"></div>
+        </div>
+      </div>
+
+      <div class="physical-calc-branding">
+        <span>CASIO</span>
+        <span style="font-size:0.75rem; color:#828e9e;">MJ-100D</span>
+      </div>
+      <div class="solar-panel">
+        <div class="solar-grid"></div>
+        <div class="solar-grid"></div>
+        <div class="solar-grid"></div>
+        <div class="solar-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
