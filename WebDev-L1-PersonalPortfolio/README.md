@@ -13,7 +13,7 @@ This portfolio brings together my focus on Data Structures & Algorithms (Java), 
 ## 🏠 Hero Section
 
 ### 📸 Project Preview
-![Hero Section](WebDev-L1-PersonalPortfolio/Images/HeroSection.png)
+![Hero Section](Images/HeroSection.png)
 
 The landing page starts with a clean, professional hero section introducing me as a developer.
 It includes:
@@ -26,9 +26,9 @@ It includes:
 ## 👤 About Me
 
 📸 _Project Preview_
-![About Section](WebDev-L1-PersonalPortfolio/Images/About.png)
+![About Section](Images/About.png)
 
-![About Section 2](WebDev-L1-PersonalPortfolio/Images/Abouts.png)
+![About Section 2](Images/Abouts.png)
 
 The about section introduces my core vision, academic background, and career goals.
 It includes:
@@ -49,7 +49,7 @@ The skills section highlights my major technical competencies.
 ## 📁 Project Showcase Carousel
 
 📸 _Project Preview_
-![Projects Section](WebDev-L1-PersonalPortfolio/Images/Projects.png)
+![Projects Section](Images/Projects.png)
 
 A dedicated interactive project section helps recruiters visualize my real-world work (including projects like Dr. Swasthya).
 Features shown:
@@ -66,20 +66,20 @@ It includes:
 
 - 🌓 **Dark/Light Mode Toggle:** 
 📸 _Project Preview_
-![Dark Mode](WebDev-L1-PersonalPortfolio/Images/DarkMode.png)
+![Dark Mode](Images/DarkMode.png)
 
 Seamlessly switches the entire website's color scheme.
 
 - 🎨 **Accent Color Switcher:** 
 📸 _Project Preview_
-![Theme](WebDev-L1-PersonalPortfolio/Images/Theme.png)
+![Theme](Images/Theme.png)
 
 Users can choose their preferred primary color (e.g., Blue, Green, Orange) from a settings panel, updating CSS variables globally.
 
 ## 📞 Contact & Feedback
 
 📸 _Project Preview_
-![Contact Section](WebDev-L1-PersonalPortfolio/Images/Contacts.png)
+![Contact Section](Images/Contacts.png)
 
 The contact section provides a simple, interactive form for recruiters and connections to reach out.
 It includes:
@@ -91,7 +91,7 @@ It includes:
 ## 📱 Responsive Footer
 
 📸 _Project Preview_
-![Responsive](WebDev-L1-PersonalPortfolio/Images/Responsive.png)
+![Responsive](Images/Responsive.png)
 
 The footer contains navigation links and social media connections (LinkedIn, GitHub, etc.).
 It is designed to remain organized and easily accessible across all screen sizes.
