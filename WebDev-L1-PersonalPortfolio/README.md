@@ -5,16 +5,14 @@ This portfolio brings together my focus on Data Structures & Algorithms (Java), 
 
 📌 This project is created as a complete dynamic frontend web application using HTML, CSS, and Vanilla JavaScript.
 
-### 🔴 Live Demo
-
-[Click Here to View Live](#) _(https://oibsip-5an5-ke7fpe2yt-keshav-mishra.vercel.app)_
+## Live Demo
+ [Click Here to View Live](https://oibsip-5an5-ircdafjwg-keshav-mishra.vercel.app)
 
 ---
 
 ## 🏠 Hero Section
 
-📸 _Project Preview_
-
+### 📸 Project Preview
 ![Hero Section](WebDev-L1-PersonalPortfolio/Images/HeroSection.png)
 
 The landing page starts with a clean, professional hero section introducing me as a developer.
@@ -28,9 +26,9 @@ It includes:
 ## 👤 About Me
 
 📸 _Project Preview_
-![About Section](WebDev-L1-PersonalPortfolio/Images/About Section.png)
+![About Section](WebDev-L1-PersonalPortfolio/Images/About.png)
 
-![About Section 2](WebDev-L1-PersonalPortfolio/Images/About Section 2.png)
+![About Section 2](WebDev-L1-PersonalPortfolio/Images/Abouts.png)
 
 The about section introduces my core vision, academic background, and career goals.
 It includes:
@@ -46,12 +44,12 @@ The skills section highlights my major technical competencies.
 - 💻 Core Languages (Java, etc.)
 - 🌐 Web Technologies (HTML, CSS, JS)
 - 🧠 Data Structures & Algorithms
-  Each skill area is presented using a simple card-based or progress-bar layout with modern styling.
+ Each skill area is presented using a simple card-based or progress-bar layout with modern styling.
 
 ## 📁 Project Showcase Carousel
 
 📸 _Project Preview_
-![Projects Section](WebDev-L1-PersonalPortfolio/Images/Projects Section.png)
+![Projects Section](WebDev-L1-PersonalPortfolio/Images/Projects.png)
 
 A dedicated interactive project section helps recruiters visualize my real-world work (including projects like Dr. Swasthya).
 Features shown:
@@ -63,14 +61,12 @@ Features shown:
 
 ## 🎨 Theme & Customization Panel
 
-
 The website includes a dynamic theme customization feature to demonstrate advanced JavaScript DOM manipulation.
 It includes:
 
 - 🌓 **Dark/Light Mode Toggle:** 
 📸 _Project Preview_
 ![Dark Mode](WebDev-L1-PersonalPortfolio/Images/DarkMode.png)
-
 
 Seamlessly switches the entire website's color scheme.
 
@@ -83,7 +79,7 @@ Users can choose their preferred primary color (e.g., Blue, Green, Orange) from 
 ## 📞 Contact & Feedback
 
 📸 _Project Preview_
-![Theme](WebDev-L1-PersonalPortfolio/Images/About Section.png)
+![Contact Section](WebDev-L1-PersonalPortfolio/Images/Contacts.png)
 
 The contact section provides a simple, interactive form for recruiters and connections to reach out.
 It includes:
@@ -176,4 +172,3 @@ Portfolio/
 ├── style.css             # Main stylesheet with themes and media queries
 │
 └── script.js             # JavaScript logic (sliders, popups, theme, typing)
-```
