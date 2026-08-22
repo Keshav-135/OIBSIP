@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--==========Title==========-->
+    <title>Temperature Converter & Weather Hub</title>
+    <!--==========Fevicon==========-->
+    <link rel="icon" href="images/fevicon.png" />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--========== Welcome Overlay========== -->
+    <div class="welcome-overlay" id="welcome-overlay">
+      <div class="welcome-text">Welcome to Tempflow</div>
+    </div>
+    <div class="background-overlay">
+      <video autoplay muted loop class="bg-video">
+        <source src="images/background.mp4" type="video/mp4" />
+      </video>
+      <div class="glass-container">
+        <!-- ==========Sidebar Navigation========== -->
+        <aside class="sidebar">
+          <div class="logo">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <div class="nav-links">
+            <a href="#" class="nav-item active"
+              ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="#" class="nav-item" id="book-nav-btn"
+              ><i class="fa-solid fa-book"></i
+            ></a>
+            <a href="#" class="nav-item" id="history-nav-btn"
+              ><i class="fa-solid fa-clock-rotate-left"></i
+            ></a>
+          </div>
+          <div class="sidebar-footer">
+            <button class="icon-btn" id="theme-toggle-btn">
+              <i class="fa-solid fa-palette"></i>
+            </button>
+            <button class="icon-btn" id="dark-mode-btn">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+          </div>
+        </aside>
+
+        <!-- ===========Main Content Layout=========== -->
+        <main class="main-content">
+          <header class="app-header">
+            <div class="brand-badge">
+              <i class="fa-solid fa-temperature-three-quarters"></i> TEMPFLOW
+              HUB
+            </div>
+            <h1>Temperature Converter & Weather Hub</h1>
+            <p>
+              Advanced multi-unit temperature calculator with instant presets
+              and live insights.
+            </p>
+          </header>
+
+          <div class="content-scroll-area">
+            <!-- Input Panel -->
+            <div class="input-panel">
+              <div class="panel-header">TEMPERATURE VALUE</div>
+              <div class="input-controls">
+                <input type="number" id="main-value" value="25" />
+                <select id="main-unit">
+                  <option value="celsius">°C — Celsius</option>
+                  <option value="fahrenheit">°F — Fahrenheit</option>
+                  <option value="kelvin">K — Kelvin</option>
+                </select>
+              </div>
+              <div class="slider-wrapper">
+                <input
+                  type="range"
+                  id="main-slider"
+                  min="-50"
+                  max="150"
+                  value="25"
+                />
+              </div>
+              <!-- ===========Presets Group=========== -->
+              <div class="presets-group">
+                <button
+                  class="preset-chip"
+                  data-val="-273.15"
+                  data-unit="celsius"
+                >
+                  Absolute zero
+                </button>
+                <button class="preset-chip" data-val="0" data-unit="celsius">
+                  Freezing point
+                </button>
+                <button class="preset-chip" data-val="37" data-unit="celsius">
+                  Body temp
+                </button>
+                <button class="preset-chip" data-val="25" data-unit="celsius">
+                  Room temp
+                </button>
+                <button class="preset-chip" data-val="100" data-unit="celsius">
+                  Boiling point
+                </button>
+                <button class="preset-chip" data-val="-196" data-unit="celsius">
+                  Liquid nitrogen
+                </button>
+                <button class="preset-chip" data-val="0.01" data-unit="celsius">
+                  Triple point
+                </button>
+                <button
+                  class="preset-chip"
+                  data-val="-78.5"
+                  data-unit="celsius"
+                >
+                  Dry Ice
+                </button>
+                <button class="preset-chip" data-val="15" data-unit="celsius">
+                  Earth Avg
+                </button>
+              </div>
+            </div>
+
+            <!-- ============Cards Grid============ -->
+            <div class="cards-grid">
+              <div class="conversion-card">
+                <div class="card-top">CELSIUS</div>
+                <div class="card-mid" id="res-celsius">25.00°C</div>
+                <button
+                  class="copy-btn"
+                  onclick="
+                    copyText(document.getElementById('res-celsius').textContent)
+                  "
+                >
+                  <i class="fa-solid fa-copy"></i> COPY
+                </button>
+              </div>
+              <div class="conversion-card">
+                <div class="card-top">FAHRENHEIT</div>
+                <div class="card-mid" id="res-fahrenheit">77.00°F</div>
+                <button
+                  class="copy-btn"
+                  onclick="
+                    copyText(
+                      document.getElementById('res-fahrenheit').textContent,
+                    )
+                  "
+                >
+                  <i class="fa-solid fa-copy"></i> COPY
+                </button>
+              </div>
+              <div class="conversion-card">
+                <div class="card-top">KELVIN</div>
+                <div class="card-mid" id="res-kelvin">298.15 K</div>
+                <button
+                  class="copy-btn"
+                  onclick="
+                    copyText(document.getElementById('res-kelvin').textContent)
+                  "
+                >
+                  <i class="fa-solid fa-copy"></i> COPY
+                </button>
+              </div>
+            </div>
+
+            <!-- ============Dropdown Section for Extra units============ -->
+            <div class="dropdown-section">
+              <button class="toggle-dropdown-btn" id-target="extra-units-box">
+                <span>Show Rankine & Réaumur</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div
+                class="extra-grid"
+                id="extra-units-box"
+                style="display: none"
+              >
+                <div class="conversion-card">
+                  <div class="card-top">RANKINE</div>
+                  <div class="card-mid" id="res-rankine">536.67 °R</div>
+                  <button
+                    class="copy-btn"
+                    onclick="
+                      copyText(
+                        document.getElementById('res-rankine').textContent,
+                      )
+                    "
+                  >
+                    <i class="fa-solid fa-copy"></i> COPY
+                  </button>
+                </div>
+                <div class="conversion-card">
+                  <div class="card-top">RÉAUMUR</div>
+                  <div class="card-mid" id="res-réaumur">20.00 °Ré</div>
+                  <button
+                    class="copy-btn"
+                    onclick="
+                      copyText(
+                        document.getElementById('res-réaumur').textContent,
+                      )
+                    "
+                  >
+                    <i class="fa-solid fa-copy"></i> COPY
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ============Dropdown Section for Working Steps============== -->
+            <div class="dropdown-section">
+              <button class="toggle-dropdown-btn" id-target="working-steps-box">
+                <span>Show Conversion Formula & Working</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div id="working-steps-box" style="display: none">
+                <div class="working-box" id="working-steps-text">
+                  Steps will appear here...
+                </div>
+              </div>
+            </div>
+
+            <!-- ============History Panel============== -->
+            <div class="history-panel">
+              <div class="history-panel-header">
+                <span>RECENT CONVERSIONS</span>
+                <button class="text-clear-btn" id="clear-history-btn">
+                  Clear History
+                </button>
+              </div>
+              <div class="history-content-list" id="history-content-list">
+                <div class="no-history-text">Nothing converted yet.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- =============Modals=============== -->
+    <div class="modal hidden" id="formulas-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2><i class="fa-solid fa-book"></i> Formulas Reference</h2>
+          <button class="close-modal-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><strong>Celsius to Fahrenheit:</strong> (C × 9/5) + 32</li>
+            <li><strong>Celsius to Kelvin:</strong> C + 273.15</li>
+            <li><strong>Fahrenheit to Celsius:</strong> (F - 32) × 5/9</li>
+            <li><strong>Kelvin to Celsius:</strong> K - 273.15</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal hidden" id="history-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>
+            <i class="fa-solid fa-clock-rotate-left"></i> Full History Log
+          </h2>
+          <button class="close-modal-btn">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-history-list">
+          <p style="color: var(--text-sub)">No conversion logs recorded yet.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
