@@ -10,13 +10,13 @@ TempFlow Hub allows users to instantly convert temperatures between multiple uni
 
 ## 🌐 Live Demo
 
-🔗 **Live Website:** https://your-live-link.vercel.app
+🔗 **Click Here to View Live** https://oibsip-foz1-colxeutw2-keshav-mishra.vercel.app
 
 ---
 
 ## 📸 Project Preview
 
-![Project Image](Images/home.png)
+![Project Image](images/ProjectImage1.png)
 
 ### 🏠 Home Dashboard
 
@@ -48,6 +48,7 @@ The converted values update automatically as the input changes.
 
 ### ⚡ Quick Temperature Presets
 
+
 One-click preset buttons for commonly used temperatures.
 
 **Available Presets**
@@ -65,6 +66,10 @@ One-click preset buttons for commonly used temperatures.
 ---
 
 ### 📊 Additional Temperature Scales
+
+## 📸 Project Preview
+
+![Project Image](images/ProjectImage2.png)
 
 The project also supports advanced temperature units.
 
@@ -106,23 +111,48 @@ TempFlow prevents invalid temperature values below **Absolute Zero (-273.15°C)*
 Every successful conversion is stored in a recent history section with the option to clear previous records.
 
 ---
+### Dark/Light Mode
+
+## 📸 Project Preview
+
+![Project Image](images/ProjectImage4.png)
+
+---
+
+### MultiColor Option
+
+## 📸 Project Preview
+
+![Project Image](images/ProjectImage3.png)
+
+---
+
+### Responsive
+
+## 📸 Project Preview
+
+![Project Image](images/ProjectImage5.png)
+
+## 📸 Project Preview
+
+![Project Image](images/ProjectImage6.png)
+
+---
 
 ## ✨ Key Features
 
-- 🌡️ Multi-unit temperature conversion
-- ⚡ Instant real-time calculation
-- 📱 Fully responsive design
-- 🎨 Modern glassmorphism UI
-- 🌍 Weather inspired dashboard
-- 🔘 Quick temperature presets
-- 📊 Rankine & Réaumur support
-- 🧮 Formula & working section
-- 🚨 Smart input validation 
-- 📋 Copy converted values
-- 🕘 Recent conversion history
-- 🎯 Hover effects & smooth transitions
-- 📜 Custom scrollbar
-- 🔗 Clean and beginner-friendly interface
+- 🌡️ Multi-unit temperature conversion (Celsius, Fahrenheit, Kelvin, Rankine, Réaumur)
+- ⚡ Instant real-time calculation & live interactive slider
+- 🌓 Dark/Light mode toggle for custom visual comfort
+- 🎨 Dynamic accent color theme switcher 
+- 📱 Fully responsive design optimized for all devices
+- 🧊 Modern glassmorphism UI with smooth hover effects
+- 🔘 Quick temperature presets (Absolute zero, boiling point, room temp, etc.)
+- 🧮 Step-by-step formula & working section
+- 🚨 Smart input validation & absolute zero protection warning
+- 📋 One-click copy converted values functionality
+- 🕘 Recent conversion history tracker with clear options
+- 📜 Custom scrollbar & clean, modern layout
 
 ---
 
